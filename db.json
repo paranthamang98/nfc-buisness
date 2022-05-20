@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "name": "paranthaman",
+      "email": "paranthamang98@gmail.com",
+      "password": "pa8012175851"
+    },
+    {
+      "name": "balaji",
+      "email": "balaji98@gmail.com",
+      "password": "ba8012175851"
+    },
+    {
+      "name": "bala",
+      "email": "bala98@gmail.com",
+      "password": "ba8012175851"
+    },
+    {
+      "id": 4,
+      "name": "bala1",
+      "email": "bala198@gmail.com",
+      "password": "ba8012175851"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,175 @@
+.main-login{
+    background-color: #090909;
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+}
+.mob{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_input{
+    background-image: url(../image/Vector\ 5.png);
+    background-position: right ;
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+.login_inner{
+    width: 340px;
+    margin: auto;
+}
+.login_logo{
+    padding-top: 60px;
+}
+.login_header{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    position: relative;
+    padding-top: 100px;
+    margin-bottom: 10px;
+}
+.login_header::after{
+    position: absolute;
+    width: 40px;
+    height: 5px;
+   left: 0;
+   bottom: -10px;
+   content: '';
+    background: #090909;
+    border-radius: 2px;
+}
+.main-login input{
+    display: block;
+    width: 100%;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FBCBBD;
+    background: #FE7F5A;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding-block: 13px ;
+    padding-inline: 40px;
+    position: relative;
+}
+.main-login ladle{
+    display: block;
+    width: 100%;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FBCBBD;
+    padding-block: 17px;
+    
+}
+.password_icon{
+    width: 47px;
+    height: 47px;
+    display: block;
+    position: absolute;
+    background-image: url(../image/Group.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+}
+.email_icon{
+    width: 47px;
+    height: 47px;
+    display: block;
+    position: absolute;
+    background-image: url(../image/mail-inbox-app\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+}
+.password_item,.email_item{
+    position: relative;
+}
+.i_icon{
+    width: 47px;
+    height: 47px;
+    display: block;
+    position: absolute;
+    background-image: url(../image/eye-Close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+}
+.last_forgot{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+.forgot{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    color: #383331;
+}
+.remember{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFD1C4;
+    
+}
+.remember input[type="checkbox"] {
+    display: unset;
+    width: unset;
+    margin-right: 10px;
+}
+input[type="submit"] {
+    background-color: #090909;
+    font-family: 'Rubik';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+color: #FFFFFF;
+border: unset;
+
+}
+.back_login{
+    font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #484848;
+
+}
+.error{
+    color: rgb(214 0 0);
+    font-size: 16px;
+    position: absolute;
+    bottom: -21px;
+    left: 0;
+}
+.btnSubmit{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
