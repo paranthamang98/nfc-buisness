@@ -7,7 +7,7 @@ import { BrowserRouter  , Routes, Route } from "react-router-dom"
 import  ManageReport from "./Dashboard/ManageReport"
 import ManageContact from "./Dashboard/ManageContact"
 import ContactDetails from "./Dashboard/ContactDetails"
-import AddContact from "./Component/AddContact"
+import AddContact from "./Dashboard/AddContact"
 
 
 function App() {

@@ -2,6 +2,9 @@ import React ,{useState} from 'react'
 // import  logo from '../image/Group 19.png'
 import Header from './Header'
 import SideMenu from './SideMenu'
+import { Pie3D } from 'react-pie3d'
+import AddContact from './AddContact';
+
 
 
 function DashboardPage() {
@@ -14,7 +17,8 @@ function DashboardPage() {
   return (
     <>
       <Header onSidebar={onSidebar}/>
-     {showSidebar? <SideMenu />:null}
+    <div className='side_inner'>
+    {showSidebar? <SideMenu />:null}
     <div className='das_body'>
       <h1 className='das_header'>Overview</h1>
       <div className='row'>
@@ -41,6 +45,9 @@ function DashboardPage() {
             
           </div>
           <h2>55</h2>
+          <div>
+            
+          </div>
             </div>
         </div>
         <div className='col-lg-6 col-md-12 '>
@@ -70,6 +77,9 @@ function DashboardPage() {
         </div>
       </div>
     </div>
+   
+    </div>
+   <AddContact/>
     </>
   )
 }

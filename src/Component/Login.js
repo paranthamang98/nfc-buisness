@@ -3,7 +3,8 @@ import  logo from '../image/Group 19.png'
 import  banner from '../image/Group 1925.png'
 import '../Component/login.css'
 import { BrowserRouter as Routes, Route, useNavigate } from "react-router-dom"
-import { axios } from 'axios'
+import  axios  from 'axios'
+
 
 
 
@@ -16,42 +17,27 @@ function Login() {
     const [valuef , setValu] = useState({ email: "" ,  password: "" });
     const [errorv , setErrorv] = useState({});
     const [ Issubmite , setIsSubmite] = useState(false);
+    const [post ,setpost] = useState([])
+    
 
     const changing = (e) => {
         const { name , value } = e.target;
         setValu({ ...valuef , [name]: value})
     }
-    // const [get , setget] = useState([]);
-    // const localApi = "http://localhost:3000/posts";
-
     useEffect(() => {
         const response=async()=>{
-            axios.get("http://localhost:3000/posts").then(res=>console.log(res)); 
+           await axios.get("http://localhost:8001/posts").then(response =>   setpost(response.data)); 
         }
         response();
     }, []);
-
-    const response= axios.get("http://localhost:3000/posts");
-    console.log(response);
-
-
+    console.log(post);
     
-    // const [Value, onSetValue] = useState();
-    // const [ValuePas, onSetValuePas] = useState();
-    // const [emailValid, setEmailValid] = useState();
-    // const [passValid , setPassValid] = useState();
-    
-
-    // const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    // const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[0-9])(?=.{8,})");
 
     const changingType = () =>{
         setShowtype(!showtype);
     }
     const checking = (e) =>{
         e.preventDefault(); 
-    //    setEmailValid ( regEmail.test(Value) &&  Value  ? '' : 'Please enter your email address ' ) 
-    //    setPassValid (strongRegex.test(ValuePas) &&  ValuePas ? ''  :'Please enter your password' ) 
       setErrorv(validate(valuef));
       setIsSubmite(true);
       console.log(Issubmite);
@@ -74,17 +60,10 @@ function Login() {
         error.password = 'Emailis required';
     }else if(!strongRegex.test(values.password)){
         error.password ='this password is not valide password format';}
-    // }else if(!values.password.length < 7){
-    //     error.password ='password cannot exceed less than 7 characters';
-    // }else if(!values.password.length > 13){y
-    //     error.password='password cannot exceed less than 10 characters';
-    // }
     return error;
 
     };
   
-        
-    
   return (
     <div className='main-login row '>
         <div className='col-6 mob'>
@@ -97,9 +76,8 @@ function Login() {
        </div>
        <div>
            {Object.keys(errorv).length === 0 && Issubmite ?  (<div> sigen in successfully</div>) :(<pre>{JSON.stringify(valuef , undefined ,2)}</pre>)}
+         
        </div>
-
-
 
        <h6 className='login_header'>Login</h6>
        <form onSubmit={checking}>
