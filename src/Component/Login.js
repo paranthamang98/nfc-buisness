@@ -16,13 +16,19 @@ function Login() {
     // value getting procerr input section
     const [valuef , setValu] = useState({ email: "" ,  password: "" });
     const [errorv , setErrorv] = useState({});
-    const [ Issubmite , setIsSubmite] = useState(false);
+    const [ issubmite , setIsSubmite] = useState();
     const [post ,setpost] = useState([])
+    
+    
+    
     
 
     const changing = (e) => {
         const { name , value } = e.target;
         setValu({ ...valuef , [name]: value})
+        
+        
+         
     }
     useEffect(() => {
         const response=async()=>{
@@ -30,8 +36,10 @@ function Login() {
         }
         response();
     }, []);
-    console.log(post);
+   
     
+   
+  
 
     const changingType = () =>{
         setShowtype(!showtype);
@@ -39,15 +47,24 @@ function Login() {
     const checking = (e) =>{
         e.preventDefault(); 
       setErrorv(validate(valuef));
-      setIsSubmite(true);
-      console.log(Issubmite);
+    //   setIsSubmite(true);
+    const val = post.filter(e => {
+        return (e.password == valuef.password) && (e.email == valuef.email)
+     })
+     if(val.length>0){
+         navigate('/DashboardPage')
+         console.log("******");
+     }
+    //  console.log(val.length , "getvalue");
+
+      
     }
   
-    useEffect(() =>{
-        if(Object.keys(errorv).length === 0 && Issubmite){
-            console.log(valuef);
-        }
-    },[errorv])
+    // useEffect(() =>{
+    //     if(Object.keys(errorv).length === 0 && Issubmite){
+    //         console.log(valuef);
+    //     }
+    // },[errorv])
     const validate = (values) => {
     const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[0-9])(?=.{8,})");
@@ -74,10 +91,10 @@ function Login() {
        <div className='login_logo'>
        <img src={logo}/>
        </div>
-       <div>
-           {Object.keys(errorv).length === 0 && Issubmite ?  (<div> sigen in successfully</div>) :(<pre>{JSON.stringify(valuef , undefined ,2)}</pre>)}
+       {/* <div>
+           {Object.keys(errorv).length === 0 && Issubmite ?  (<div> sigen in successfully</div>) :(<pre>{JSON.stringify(valuef )}</pre>)}
          
-       </div>
+       </div> */}
 
        <h6 className='login_header'>Login</h6>
        <form onSubmit={checking}>
@@ -109,12 +126,13 @@ function Login() {
                <p className='forgot' onClick={() => {navigate('/ForgotPassword');}}>Forgot Password?</p>
            </div>
            <div className='btnSubmit'>
-               <input type='submit' value='LOGIN'/>
+               <input type='submit' value='LOGIN' />
            </div>
            {/* <span>{Issubmite}</span> */}
        </form>
        </div>
         </div>
+      
 
      
     </div>
