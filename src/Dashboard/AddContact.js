@@ -17,7 +17,7 @@ function AddContact() {
     {showSidebar? <SideMenu />:null}
      <div className='das_body'>
        <h1 className='das_header'>Contact Detail</h1>
-      <div className='col-12'>
+      <div className='col-12 bg_color'>
         <div className='con_list'>
           <h1>List of Contacts</h1>
           <div className='add_contact_btn'>
@@ -159,7 +159,7 @@ function AddContact() {
                <div className='close'></div>
            </div>
           </div>
-          <div className='col-12 update_cancel '>
+          <div className='col-12 bg_color update_cancel '>
             <input type='submit' value='Update'/>
             <input type='submit' value='Cancel'/>
           </div>

@@ -21,7 +21,7 @@ function ManageContact() {
    
      <div className='das_body'>
      <h1 className='das_header'>Contact Detail</h1>
-      <div className='col-12'>
+      <div className='col-12 bg_color'>
         <div className='con_list'>
           <h1>List of Contacts</h1>
           <div className='contact_btn'>

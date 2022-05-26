@@ -523,4 +523,59 @@ color: #A7A7A7;
     background-color: transparent;
 
 }
+.bg_color{
+    background: #1E1F22;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.contact_info{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.contact_info button{
+    border: 1px solid #969696;
+    border-radius: 5px;
+    padding: 12px 40px;
+    color: #969696;
+}
+.contact_info h1{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.inner_section{
+   
+  
+}
+.inner_section h4{
+    font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: #FFFFFF;
+}
+.inner_section p{
+    font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #939393;
+
+}
+.inner_side{
+    background: #1E1F22;
+    border-radius: 5px;
+    margin: 5px    ;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+}
 

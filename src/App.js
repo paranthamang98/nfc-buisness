@@ -28,7 +28,7 @@ function App() {
                 <Route exact path="/" element={<Login/>}/>
                 <Route exact path="/ForgotPassword" element={<ForgotPassword/>}/>
                 <Route exact path="/ResetPassword" element={<ResetPassword/>}/>
-                {/* <Route exact path="/ResetPassword" element={<AddContact/>}/> */}
+                <Route  path="/ManageContact/ContactDetails" element={<ContactDetails/>}/>
                 
            
                 

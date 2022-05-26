@@ -19,7 +19,7 @@ function ManageReport() {
    
      <div className='das_body'>
    
-      <div className='col-12'>
+      <div className='col-12 bg_color'>
         <div className='con_list'>
           <h1>List of Reports</h1>
           <div className='contact_btn'>
