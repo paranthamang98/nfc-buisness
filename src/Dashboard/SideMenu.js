@@ -11,7 +11,7 @@ function SideMenu() {
         <ul className='menuItems'>
             <li onClick={()=>{navigate("/DashboardPage")}}><img src={dashboard}  /> Dashboard</li>
             <li onClick={()=>{navigate("/ManageContact")}}><img src={contacts}  /> Manage Contact</li>
-            <li><img src={newspaper}/> Reports</li>
+            <li onClick={()=>{navigate("/ManageReport")}}><img src={newspaper}/> Reports</li>
         </ul>
         <p>Copyright © All rights reserved.</p>
     </div>

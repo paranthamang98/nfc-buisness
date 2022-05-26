@@ -1,16 +1,19 @@
 {
   "posts": [
     {
+      "id": 1,
       "name": "paranthaman",
       "email": "paranthamang98@gmail.com",
       "password": "pa8012175851"
     },
     {
+      "id": 2,
       "name": "balaji",
       "email": "balaji98@gmail.com",
       "password": "ba8012175851"
     },
     {
+      "id": 3,
       "name": "bala",
       "email": "bala98@gmail.com",
       "password": "ba8012175851"
@@ -35,7 +38,36 @@
       "postId": 1
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "profile": [
+    {
+      "id": 1,
+      "name": "paranthaman",
+      "ContactsCount": "20"
+    },
+    {
+      "id": 2,
+      "name": "paranthaman",
+      "ContactsCount": "20"
+    },
+    {
+      "id": 3,
+      "name": "paranthaman",
+      "ContactsCount": "10"
+    },
+    {
+      "id": 4,
+      "name": "paranthaman",
+      "ContactsCount": "20"
+    },
+    {
+      "id": 5,
+      "name": "paranthaman",
+      "ContactsCount": "10"
+    },
+    {
+      "id": 6,
+      "name": "paranthaman",
+      "ContactsCount": "20"
+    }
+  ]
 }

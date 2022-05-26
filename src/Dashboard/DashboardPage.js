@@ -1,20 +1,34 @@
-import React ,{useState} from 'react'
+import React ,{useState , useEffect} from 'react'
 // import  logo from '../image/Group 19.png'
 import Header from './Header'
 import SideMenu from './SideMenu'
-import { Pie3D } from 'react-pie3d'
-import ReactDOM from 'react-dom';
-import Donut from 'react-donut';
+
+import  axios  from 'axios'
+
 
 
 
 function DashboardPage() {
 
   const [showSidebar, setShowSidebar] = useState(true);
+  const [item , setitem] = useState([])
 
     const onSidebar = () => {
         setShowSidebar(!showSidebar);
     };
+    useEffect(() => {
+      const response=async()=>{
+         await axios.get("http://localhost:8001/profile").then(response =>   {
+           setitem(response.data)
+        console.log(response.data)}); 
+      }
+      response();
+  }, []);
+  console.log(item, "fun")
+
+
+  
+  console.log(item);
   return (
     <>
       <Header onSidebar={onSidebar}/>
@@ -47,24 +61,7 @@ function DashboardPage() {
           </div>
           <h2>55</h2>
           <div>
-            {/* <h1>Hello CodeSandbox</h1>
-      <Donut
-        chartData={[
-          { name: 'Black Panther', data: 30 },
-          { name: 'Avengers', data: 50 },
-          { name: 'Antman', data: 20 },
-        ]}
-        chartWidth={300}
-        chartHeight={500}
-        title="Marvel movies that were popular this year"
-        chartThemeConfig={{
-          series: {
-            colors: ['#ffe0bd', '#670303', '#6cbfce'],
-          },
-        }}
-      /> */}
-
-            
+           
           </div>
             </div>
         </div>
@@ -83,11 +80,13 @@ function DashboardPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
+              {item.map((e) =>(
+                <tr key={e.id} >
+              <td>{e.id}</td>
+              <td><a href='#'>{e.name}</a> </td>
+              <td>{e.ContactsCount}</td>
+              </tr>
+              ))  }
               </tbody>
             </table>
           </div>

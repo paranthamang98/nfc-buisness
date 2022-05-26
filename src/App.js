@@ -20,7 +20,7 @@ function App() {
    <ForgotPassword/> */}
    <BrowserRouter>
    <Routes>
-               <Route  path="/manageReport" element={<ManageReport/>}/>
+               <Route  path="/ManageReport" element={<ManageReport/>}/>
                 <Route  path="/ManageContact" element={<ManageContact/>}/>
                 <Route  path="/ContactDetails" element={<ContactDetails/>}/>
                 <Route  path="/ManageContact/AddContact" element={<AddContact/>}/>

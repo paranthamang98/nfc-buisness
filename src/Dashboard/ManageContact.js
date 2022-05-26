@@ -1,23 +1,18 @@
 import React, { useState , useEffect} from 'react'
-import  axios  from 'axios'
+
 import Header from './Header';
 import SideMenu from './SideMenu'
 import { useNavigate } from 'react-router-dom'
 
 function ManageContact() {
   const navigate=useNavigate();
- const [item , setitem] = useState()
+ 
  const [showSidebar, setShowSidebar] = useState(true);
 
     const onSidebar = () => {
         setShowSidebar(!showSidebar);
     };
-  useEffect(() => {
-    const response=async()=>{
-       await axios.get("http://localhost:8001/posts").then(response =>   setitem(response.data)); 
-    }
-    response();
-}, []);
+  
   return (
     <>
     <Header onSidebar={onSidebar}/>
@@ -56,17 +51,7 @@ function ManageContact() {
               </tr>
             </thead>
             <tbody>
-              {/* {item.map((e) =>(
-                <tr key={e.id}>
-              <td>{e.id}</td>
-              <td>{e.email}</td>
-              <td>{e.password}</td>
-              <td></td>
-              <td></td>
-              </tr>
-              ))
-                
-              } */}
+             
               
             </tbody>
           </table>
