@@ -20,6 +20,12 @@
       "name": "bala1",
       "email": "bala198@gmail.com",
       "password": "ba8012175851"
+    },
+    {
+      "id": 5,
+      "name": "bala2",
+      "email": "bala199@gmail.com",
+      "password": "ba8012175851"
     }
   ],
   "comments": [

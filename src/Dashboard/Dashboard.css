@@ -257,6 +257,8 @@ padding-right: 20px;
 }
 .das_body{
     width: 100%;
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
 }
 
 
@@ -373,14 +375,16 @@ padding-right: 20px;
     border: 1px solid #F39C12;
     border-radius: 5px;
     color: #fff;
-    padding: 13px;
+    padding: 6px 14px;
+    margin-block: 20px;
 }
+
 .logo_inner{
     border-radius: 50%;
     background-color:#161616;
     width: 75px;
     height: 75px;
-    margin-right: 20px;
+    margin-inline: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -410,9 +414,112 @@ padding-right: 20px;
     line-height: 14px;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin: 0;
+    margin-left: 20px;
 }
 .field{
     padding-block: 25px;
     display: flex;
     align-items: center;
+    background: #2B2C30;
+    border-radius: 5px;
+
 }
+h4.inform   {
+    font-family: 'Rubik';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+padding-block: 20px;
+border-bottom: 1px solid #2D2E31 ;
+color: #A7A7A7;
+
+}
+.name_item input{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    padding: 13px;
+    background: #161616;
+    padding-left: 50px;
+    border: 1px solid #4B4B4B;
+    box-shadow: 0px 8px 20px rgb(0 0 0 / 5%);
+    border-radius: 5px;
+    width: 100%;
+}
+.name_item lable{
+    display: block;
+    padding: 13px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #939393;
+}
+.name_item{
+    position: relative;
+    margin-block: 5px;
+    padding-block: 10px;
+}
+.name_icon{
+    position: absolute;
+}
+ .name_icon{
+    width: 50px;
+    height: 45px;
+    bottom: 11px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.inner_icon:nth-child(1) .name_icon{ background-image: url(../image/iconfinder_user_people_person_users_man_5340287\ 1.png); }
+.inner_icon:nth-child(2) .name_icon{ background-image: url(../image/portfolio\ 1.png); }
+.inner_icon:nth-child(3) .name_icon{ background-image: url(../image/telephone\(1\)\ 1.png); }
+.inner_icon:nth-child(4) .name_icon{ background-image: url(../image/mail-inbox-app\ 1.png); } 
+.inner_icon:nth-child(5) .name_icon{ background-image: url(../image/people\(2\)\ 1.png); }
+ .inner_icon:nth-child(6) .name_icon{ background-image: url(../image/world-wide-web\ 1.png); }
+.inner_icon:nth-child(7) .name_icon{ background-image: url(../image/Layer\ x0020\ 1.png); }
+.inner_icon:nth-child(8) .name_icon{ background-image: url(../image/iconfinder_Social_social_instagram_6622786\ 1.png); }
+.inner_icon:nth-child(9) .name_icon{ background-image: url(../image/iconfinder_linkedin-social-media_765228\ 1.png); }
+.inner_icon:nth-child(10) .name_icon{ background-image: url(../image/telephone\(1\)\ 1.png); }  
+.close{
+    position: absolute;
+    width: 49px;
+    height: 47px;
+    bottom: 10px;
+    right: 0px;
+    background: #D1401B;
+    border-radius: 0px 4px 4px 0px;
+    background-image: url(../image/Close.png);
+    background-repeat: no-repeat; 
+     background-position: center;
+}
+.update_cancel{
+    margin: 10px;
+    text-align: center;
+}
+.update_cancel input{
+    margin-left: 20px;
+    background: #F26339;
+    border: 1px solid #F26339;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+   
+}
+.update_cancel input:nth-child(2){
+    color: #807F7F;
+    border: 1px solid #807F7F;
+    background-color: transparent;
+
+}
+

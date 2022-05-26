@@ -19,10 +19,6 @@ function Login() {
     const [ issubmite , setIsSubmite] = useState();
     const [post ,setpost] = useState([])
     
-    
-    
-    
-
     const changing = (e) => {
         const { name , value } = e.target;
         setValu({ ...valuef , [name]: value})
@@ -51,6 +47,7 @@ function Login() {
     const val = post.filter(e => {
         return (e.password == valuef.password) && (e.email == valuef.email)
      })
+     console.log(val);
      if(val.length>0){
          navigate('/DashboardPage')
          console.log("******");
@@ -107,8 +104,6 @@ function Login() {
                 onChange={changing}
                value={valuef.email}/>
                <div className='error' >{errorv.email}</div>
-              
-               
            </div>
            <div className='password_item'>
                <div className='password_icon'></div>

@@ -3,7 +3,8 @@ import React ,{useState} from 'react'
 import Header from './Header'
 import SideMenu from './SideMenu'
 import { Pie3D } from 'react-pie3d'
-import AddContact from './AddContact';
+import ReactDOM from 'react-dom';
+import Donut from 'react-donut';
 
 
 
@@ -46,6 +47,23 @@ function DashboardPage() {
           </div>
           <h2>55</h2>
           <div>
+            {/* <h1>Hello CodeSandbox</h1>
+      <Donut
+        chartData={[
+          { name: 'Black Panther', data: 30 },
+          { name: 'Avengers', data: 50 },
+          { name: 'Antman', data: 20 },
+        ]}
+        chartWidth={300}
+        chartHeight={500}
+        title="Marvel movies that were popular this year"
+        chartThemeConfig={{
+          series: {
+            colors: ['#ffe0bd', '#670303', '#6cbfce'],
+          },
+        }}
+      /> */}
+
             
           </div>
             </div>
@@ -79,7 +97,7 @@ function DashboardPage() {
     </div>
    
     </div>
-   <AddContact/>
+   
     </>
   )
 }

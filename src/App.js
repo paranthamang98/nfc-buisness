@@ -10,6 +10,7 @@ import ContactDetails from "./Dashboard/ContactDetails"
 import AddContact from "./Dashboard/AddContact"
 
 
+
 function App() {
   return (
    <div>
@@ -22,11 +23,13 @@ function App() {
                <Route  path="/manageReport" element={<ManageReport/>}/>
                 <Route  path="/ManageContact" element={<ManageContact/>}/>
                 <Route  path="/ContactDetails" element={<ContactDetails/>}/>
-                <Route  path="/AddContact" element={<AddContact/>}/>
+                <Route  path="/ManageContact/AddContact" element={<AddContact/>}/>
                 <Route  path="/DashboardPage" element={<DashboardPage/>}/>
                 <Route exact path="/" element={<Login/>}/>
                 <Route exact path="/ForgotPassword" element={<ForgotPassword/>}/>
                 <Route exact path="/ResetPassword" element={<ResetPassword/>}/>
+                {/* <Route exact path="/ResetPassword" element={<AddContact/>}/> */}
+                
            
                 
                
