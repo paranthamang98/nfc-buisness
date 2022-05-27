@@ -2,14 +2,60 @@ import React,{useState} from 'react'
 import Header from './Header'
 import SideMenu from './SideMenu'
 import filedlogo from '../image/Field.png'
+import  axios  from 'axios'
 
 
 function AddContact() {
   const [showSidebar, setShowSidebar] = useState(true);
+  const [contactValue, setContactValue] =useState({
+    name:'',
+    email:'',
+    Company:'',
+    phnumber:'',
+    org:"",
+    site:"",
+    fbId:"",
+    InstaId:"",
+    inId:"",
+    secPhnumber:""
+
+  })
 
     const onSidebar = () => {
         setShowSidebar(!showSidebar);
     };
+    const changing = (e) =>{
+      const { name , value } = e.target;
+      setContactValue({ ...contactValue , [name]: value})
+
+    }
+    
+    const checking =(e) => {
+      e.preventDefault(); 
+      
+      const postData=async()=>{
+        await axios.post(" http://localhost:8001/contactlist",contactValue).then(data=>console.log(data.data))
+      }
+      postData();
+      
+    }
+
+
+    const validate = (values) => {
+      const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[0-9])(?=.{8,})");
+      const error = {};
+      if (!values.email){
+          error.email = 'Email is  required';
+      }else if(!regEmail.test(values.email)){
+          error.email ='this Email  is not valide email format';
+      }if (!values.password){
+          error.password = 'Emailis required';
+      }else if(!strongRegex.test(values.password)){
+          error.password ='this password is not valide password format';}
+      return error;
+  
+      };
   return (
     <>
     <Header onSidebar={onSidebar}/>
@@ -35,7 +81,7 @@ function AddContact() {
         <h4 className='inform'>
         Basic Information
         </h4>
-       <form>
+       <form onSubmit={checking}>
        <div className='row'>
           <div className='col-lg-4 col-md-6 col-sm-12 inner_icon '>
           <div className='name_item'>
@@ -45,6 +91,8 @@ function AddContact() {
                 type='text'
                 name='name'
                 placeholder='Thomas Jefferson'
+                onChange={changing}
+               value={contactValue.name}
                />
                <div className='error' ></div>
            </div>
@@ -56,8 +104,10 @@ function AddContact() {
                <lable>Job Title</lable>
                <input
                 type='text'
-                name='name'
+                name='Company'
                 placeholder='Enter Job Title'
+                onChange={changing}
+               value={contactValue.Company}
                />
                <div className='error' ></div>
            </div>
@@ -68,8 +118,10 @@ function AddContact() {
                <lable>Mobile Number</lable>
                <input
                 type='text'
-                name='name'
+                name='phnumber'
                 placeholder='Enter Phone Number'
+                onChange={changing}
+               value={contactValue.phnumber}
                />
                <div className='error' ></div>
            </div>
@@ -80,8 +132,10 @@ function AddContact() {
                <lable>Email id</lable>
                <input
                 type='text'
-                name='name'
+                name='email'
                 placeholder='Enter Email id'
+                onChange={changing}
+               value={contactValue.email}
                />
                <div className='error' ></div>
            </div>
@@ -92,8 +146,10 @@ function AddContact() {
                <lable>Organization</lable>
                <input
                 type='text'
-                name='name'
+                name='org'
                 placeholder='Enter Organization'
+                onChange={changing}
+               value={contactValue.org}
                />
                <div className='error' ></div>
            </div>
@@ -104,8 +160,10 @@ function AddContact() {
                <lable>Website</lable>
                <input
                 type='text'
-                name='name'
+                name='site'
                 placeholder='Enter Website'
+                onChange={changing}
+               value={contactValue.site}
                />
                <div className='error' ></div>
            </div>
@@ -116,8 +174,10 @@ function AddContact() {
                <lable>Facebook</lable>
                <input
                 type='text'
-                name='name'
+                name='fbId'
                 placeholder='Enter facebook link'
+                onChange={changing}
+               value={contactValue.fbId}
                />
                <div className='error' ></div>
            </div>
@@ -128,8 +188,10 @@ function AddContact() {
                <lable>Instagram</lable>
                <input
                 type='text'
-                name='name'
+                name='InstaId'
                 placeholder='Enter Instagram link'
+                onChange={changing}
+               value={contactValue.InstaId}
                />
                <div className='error' ></div>
            </div>
@@ -140,8 +202,10 @@ function AddContact() {
                <lable>Linkedin</lable>
                <input
                 type='text'
-                name='name'
+                name='inId'
                 placeholder='Enter Linkedin link'
+                onChange={changing}
+               value={contactValue.inId}
                />
                <div className='error' ></div>
            </div>
@@ -152,8 +216,10 @@ function AddContact() {
                <lable>Secondary  Phone Number</lable>
                <input
                 type='text'
-                name='name'
+                name='secPhnumber'
                 placeholder='Enter Phone Number'
+                onChange={changing}
+               value={contactValue.secPhnumber}
                />
                <div className='error' ></div>
                <div className='close'></div>
@@ -161,7 +227,7 @@ function AddContact() {
           </div>
           <div className='col-12 bg_color update_cancel '>
             <input type='submit' value='Update'/>
-            <input type='submit' value='Cancel'/>
+            {/* <input type='submit' value='Cancel'/> */}
           </div>
         </div>
        </form>

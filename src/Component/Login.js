@@ -41,9 +41,10 @@ function Login() {
         setShowtype(!showtype);
     }
     const checking = (e) =>{
-        e.preventDefault(); 
+       
       setErrorv(validate(valuef));
     //   setIsSubmite(true);
+    debugger;
     const val = post.filter(e => {
         return (e.password == valuef.password) && (e.email == valuef.email)
      })
