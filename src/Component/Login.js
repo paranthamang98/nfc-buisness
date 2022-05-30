@@ -41,7 +41,7 @@ function Login() {
         setShowtype(!showtype);
     }
     const checking = (e) =>{
-       
+        e.preventDefault();
       setErrorv(validate(valuef));
     //   setIsSubmite(true);
     debugger;

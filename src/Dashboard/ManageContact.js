@@ -1,17 +1,31 @@
 import React, { useState , useEffect} from 'react'
-
+import  axios  from 'axios'
 import Header from './Header';
 import SideMenu from './SideMenu'
 import { useNavigate } from 'react-router-dom'
+import  edit from '../image/Frame 5.png'
+import  icon from '../image/iconfinder_edit_editor_pen_pencil_write_392507 3.png'
+import remove from '../image/trash.png'
 
 function ManageContact() {
   const navigate=useNavigate();
  
  const [showSidebar, setShowSidebar] = useState(true);
+ const [post , setpost] = useState([])
 
     const onSidebar = () => {
         setShowSidebar(!showSidebar);
     };
+   
+  useEffect(() => {
+    const response=async()=>{
+       await axios.get("http://localhost:8001/contactlist").then(response =>   {
+        setpost(response.data)
+      console.log(response.data)}); 
+    }
+    response();
+}, []);
+ 
   
   return (
     <>
@@ -51,7 +65,16 @@ function ManageContact() {
               </tr>
             </thead>
             <tbody>
-             
+            {post.map((e) =>(
+                <tr key={e.id} >
+              <td>{e.id}</td>
+              <td>{e.name}</td>
+              <td>{e.Company} </td>
+              <td>{e.phnumber}</td>
+              <td>{e.email}</td>
+              <td> <span onClick={card }><img src={ icon}/></span><span onClick={edit}> <img src={ edit}/></span><span onClick={remove}><img src={ remove}/></span></td>
+              </tr>
+              ))  }
               
             </tbody>
           </table>
