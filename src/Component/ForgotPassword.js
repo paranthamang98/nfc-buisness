@@ -1,20 +1,39 @@
-import React,{useState} from 'react'
+import React,{useState ,useEffect} from 'react'
 import  logo from '../image/Group 19.png'
 import  banner from '../image/Group 1925.png'
 import '../Component/login.css'
 import { useNavigate } from 'react-router-dom'
+import  axios  from 'axios'
+
 
 function ForgotPassword() {
   const navigate = useNavigate();
   const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  const [valuePas, onSetValuePa] = useState();
+  const [valuePas, onSetValuePa] = useState([]);
     const [emailValid, setEmailValid] = useState();
+    const[post , setpost] =useState([])
 
+console.log();
+    useEffect(() => {
+      const response=async()=>{
+         await axios.get("http://localhost:8001/posts").then(response =>   setpost(response.data)); 
+      }
+      response();
+  }, []);
     const checking = (e) =>{
-
       e.preventDefault();
+     setEmailValid ( regEmail.test(valuePas) &&  valuePas  ? '' : 'Please enter your email address ' )
+     const val = post.filter(e => {
+      return (e.email == valuePas)
       
-     setEmailValid ( regEmail.test(valuePas) &&  valuePas  ? '' : 'Please enter your email address ' ) 
+   })
+   const getid = val.map((e)=> {return e.id})
+   console.log(getid );
+   if(val.length>0){
+    navigate('/ResetPassword');
+    sessionStorage.setItem("regemail" ,getid)
+   
+}
       
      
      
@@ -41,7 +60,7 @@ return (
              <div className='error' >{ emailValid }</div>
          </div>
          <div className='btnSubmit'>
-             <input type='submit' value='SUBMIT'onClick={() => {navigate('/ResetPassword');}}/>
+             <input type='submit' value='SUBMIT'/>
          </div>
          <p className='back_login' onClick={() => {navigate('/');}}>
          Back to login

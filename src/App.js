@@ -22,13 +22,12 @@ function App() {
    <Routes>
                <Route  path="/ManageReport" element={<ManageReport/>}/>
                 <Route  path="/ManageContact" element={<ManageContact/>}/>
-                <Route  path="/ContactDetails" element={<ContactDetails/>}/>
                 <Route  path="/ManageContact/AddContact" element={<AddContact/>}/>
                 <Route  path="/DashboardPage" element={<DashboardPage/>}/>
                 <Route exact path="/" element={<Login/>}/>
                 <Route exact path="/ForgotPassword" element={<ForgotPassword/>}/>
                 <Route exact path="/ResetPassword" element={<ResetPassword/>}/>
-                <Route  path="/ManageContact/ContactDetails" element={<ContactDetails/>}/>
+                <Route  path="/ContactDetails" element={<ContactDetails/>}/>
                 
            
                 

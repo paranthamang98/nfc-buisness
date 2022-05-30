@@ -3,9 +3,9 @@ import  axios  from 'axios'
 import Header from './Header';
 import SideMenu from './SideMenu'
 import { useNavigate } from 'react-router-dom'
-import  edit from '../image/Frame 5.png'
+import  editIcon from '../image/Frame 5.png'
 import  icon from '../image/iconfinder_edit_editor_pen_pencil_write_392507 3.png'
-import remove from '../image/trash.png'
+import removeIcon from '../image/trash.png'
 
 function ManageContact() {
   const navigate=useNavigate();
@@ -25,6 +25,28 @@ function ManageContact() {
     }
     response();
 }, []);
+const  edit = (editId) => {
+  const index = post.filter((e) =>{return e.id === editId;}).map((e) =>{ return e.id;});
+  sessionStorage.setItem("editId", index);
+  console.log(index , "values");
+  navigate("/ManageContact/AddContact");
+};
+
+
+const card= (editI) =>{
+  const index = post.filter((e) =>{return e.id === editI;}).map((e) =>{ return e.id;});
+  sessionStorage.setItem("editId", index);
+  console.log(index , "values");
+  navigate("/ContactDetails");
+
+}
+const remove =(edits) =>{
+  const index = post.filter((e) =>{return e.id === edits;}).map((e) =>{ return e.id;});
+  sessionStorage.setItem("editId", index);
+  console.log(index , "values");
+ 
+  
+}
  
   
   return (
@@ -72,7 +94,7 @@ function ManageContact() {
               <td>{e.Company} </td>
               <td>{e.phnumber}</td>
               <td>{e.email}</td>
-              <td> <span onClick={card }><img src={ icon}/></span><span onClick={edit}> <img src={ edit}/></span><span onClick={remove}><img src={ remove}/></span></td>
+              <td> <span onClick={()=>{edit(e.id)}} ><img src={ icon}/></span><span  onClick={()=>{card(e.id)}}> <img src={ editIcon}/></span><span onClick={()=>{remove(e.id)}}><img src={removeIcon}/></span></td>
               </tr>
               ))  }
               

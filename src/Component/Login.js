@@ -44,25 +44,17 @@ function Login() {
         e.preventDefault();
       setErrorv(validate(valuef));
     //   setIsSubmite(true);
-    debugger;
     const val = post.filter(e => {
         return (e.password == valuef.password) && (e.email == valuef.email)
      })
      console.log(val);
      if(val.length>0){
          navigate('/DashboardPage')
-         console.log("******");
+         sessionStorage.setItem("email" ,valuef.email)
+         sessionStorage.setItem("password" ,valuef.password)
      }
-    //  console.log(val.length , "getvalue");
-
-      
     }
   
-    // useEffect(() =>{
-    //     if(Object.keys(errorv).length === 0 && Issubmite){
-    //         console.log(valuef);
-    //     }
-    // },[errorv])
     const validate = (values) => {
     const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[0-9])(?=.{8,})");

@@ -564,15 +564,19 @@ font-weight: 400;
 font-size: 14px;
 line-height: 17px;
 color: #939393;
+margin-top: 10px;
 
 }
 .inner_side{
     background: #1E1F22;
     border-radius: 5px;
     margin: 5px    ;
-    padding: 5px;
+    padding: 20px;
     height: 100%;
     width: 100%;
+}
+.inner_section{
+    margin-block: 20px;
 }
 .table tbody td span{
     padding-right: 7px;

@@ -1,10 +1,10 @@
 {
   "posts": [
     {
-      "id": 1,
-      "name": "paranthaman",
       "email": "paranthamang98@gmail.com",
-      "password": "pa8012175851"
+      "password": "parant1234",
+      "name": "paranthaman",
+      "id": 1
     },
     {
       "id": 2,
@@ -13,10 +13,10 @@
       "password": "ba8012175851"
     },
     {
-      "id": 3,
       "name": "bala",
       "email": "bala98@gmail.com",
-      "password": "ba8012175851"
+      "password": "paran1234",
+      "id": 3
     },
     {
       "id": 4,
@@ -215,6 +215,19 @@
       "id": 11
     },
     {
+      "name": "balaji",
+      "email": "efeff",
+      "Company": "it",
+      "phnumber": "feffeff",
+      "org": "efef",
+      "site": "efef",
+      "fbId": "fefe",
+      "InstaId": "feff",
+      "inId": "",
+      "secPhnumber": "",
+      "id": 12
+    },
+    {
       "name": "",
       "email": "",
       "Company": "",
@@ -225,7 +238,46 @@
       "InstaId": "",
       "inId": "",
       "secPhnumber": "",
-      "id": 12
+      "id": 13
+    },
+    {
+      "name": "Aashik",
+      "email": "asadddd@gmail.com",
+      "Company": "UI",
+      "phnumber": "8735666666666",
+      "org": "colan",
+      "site": "jddjdd.com",
+      "fbId": "jvdsvbdvbd",
+      "InstaId": "jsjjj",
+      "inId": "DABDBBDAJ",
+      "secPhnumber": "0987777777777",
+      "id": 14
+    },
+    {
+      "name": "njy",
+      "email": "jujuju",
+      "Company": "njjjujuyj",
+      "phnumber": "uyjuyjuj",
+      "org": "jujuj",
+      "site": "jyujj",
+      "fbId": "jyjyjy",
+      "InstaId": "jjuyjuj",
+      "inId": "ujuu",
+      "secPhnumber": "uju",
+      "id": 15
+    },
+    {
+      "name": "njy",
+      "email": "jujuju",
+      "Company": "njjjujuyj",
+      "phnumber": "uyjuyjuj",
+      "org": "jujuj",
+      "site": "jyujj",
+      "fbId": "jyjyjy",
+      "InstaId": "jjuyjuj",
+      "inId": "ujuu",
+      "secPhnumber": "uju",
+      "id": 16
     }
   ]
 }
