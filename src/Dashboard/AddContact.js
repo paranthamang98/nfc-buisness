@@ -34,7 +34,7 @@ function AddContact() {
       e.preventDefault(); 
       
       const postData=async()=>{
-        await axios.post(" http://localhost:8001/contactlist",contactValue).then(data=>console.log(data.data))
+        await axios.post("http://localhost:8001/contactlist",contactValue).then(data=>console.log(data.data))
       }
       postData();
       
