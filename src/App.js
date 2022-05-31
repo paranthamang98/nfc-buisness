@@ -8,6 +8,7 @@ import  ManageReport from "./Dashboard/ManageReport"
 import ManageContact from "./Dashboard/ManageContact"
 import ContactDetails from "./Dashboard/ContactDetails"
 import AddContact from "./Dashboard/AddContact"
+import UpdateContact from "./Dashboard/UpdateContact";
 
 
 
@@ -28,6 +29,8 @@ function App() {
                 <Route exact path="/ForgotPassword" element={<ForgotPassword/>}/>
                 <Route exact path="/ResetPassword" element={<ResetPassword/>}/>
                 <Route  path="/ContactDetails" element={<ContactDetails/>}/>
+                <Route  path="/ManageContact/UpdateContact" element={ <UpdateContact/>}/>
+               
                 
            
                 

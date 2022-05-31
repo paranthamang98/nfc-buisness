@@ -2,7 +2,7 @@
   "posts": [
     {
       "email": "paranthamang98@gmail.com",
-      "password": "parant1234",
+      "password": "pa8012175851",
       "name": "paranthaman",
       "id": 1
     },
@@ -73,20 +73,7 @@
   "contactlist": [
     {
       "name": "paranthaman",
-      "email": "paranthaman",
-      "Company": "developer",
-      "phnumber": "8012175851",
-      "org": "GD",
-      "site": "website.com",
-      "fbId": "fb.com",
-      "InstaId": "in.com",
-      "inId": "linked.com",
-      "secPhnumber": "8667292329",
-      "id": 1
-    },
-    {
-      "name": "paranthaman",
-      "email": "paranthaman",
+      "email": "paranthaman@gmail.com",
       "Company": "developer",
       "phnumber": "8012175851",
       "org": "GD",
@@ -99,7 +86,7 @@
     },
     {
       "name": "paranthaman",
-      "email": "paranthaman",
+      "email": "paranthaman@gmail.com",
       "Company": "developer",
       "phnumber": "8012175851",
       "org": "GD",
@@ -112,7 +99,7 @@
     },
     {
       "name": "paranthaman",
-      "email": "paranthaman",
+      "email": "paranthaman@gmail.com",
       "Company": "developer",
       "phnumber": "8012175851",
       "org": "GD",
@@ -125,7 +112,7 @@
     },
     {
       "name": "paranthaman",
-      "email": "paranthaman",
+      "email": "paranthaman@gmail.com",
       "Company": "developer",
       "phnumber": "8012175851",
       "org": "GD",
@@ -138,20 +125,7 @@
     },
     {
       "name": "paranthaman",
-      "email": "paranthaman",
-      "Company": "developer",
-      "phnumber": "8012175851",
-      "org": "GD",
-      "site": "website.com",
-      "fbId": "fb.com",
-      "InstaId": "in.com",
-      "inId": "linked.com",
-      "secPhnumber": "8667292329",
-      "id": 6
-    },
-    {
-      "name": "paranthaman",
-      "email": "paranthaman",
+      "email": "paranthaman@gmail.com",
       "Company": "developer",
       "phnumber": "8012175851",
       "org": "GD",
@@ -164,7 +138,7 @@
     },
     {
       "name": "paranthaman",
-      "email": "paranthaman",
+      "email": "paranthaman@gmail.com",
       "Company": "developer",
       "phnumber": "8012175851",
       "org": "GD",
@@ -177,7 +151,7 @@
     },
     {
       "name": "paranthaman",
-      "email": "paranthaman",
+      "email": "paranthaman@gmail.com",
       "Company": "developer",
       "phnumber": "8012175851",
       "org": "GD",
@@ -190,7 +164,7 @@
     },
     {
       "name": "paranthaman",
-      "email": "paranthaman",
+      "email": "paranthaman@gmail.com",
       "Company": "developer",
       "phnumber": "8012175851",
       "org": "GD",
@@ -200,45 +174,6 @@
       "inId": "linked.com",
       "secPhnumber": "8667292329",
       "id": 10
-    },
-    {
-      "name": "",
-      "email": "",
-      "Company": "",
-      "phnumber": "",
-      "org": "",
-      "site": "",
-      "fbId": "",
-      "InstaId": "",
-      "inId": "",
-      "secPhnumber": "",
-      "id": 11
-    },
-    {
-      "name": "balaji",
-      "email": "efeff",
-      "Company": "it",
-      "phnumber": "feffeff",
-      "org": "efef",
-      "site": "efef",
-      "fbId": "fefe",
-      "InstaId": "feff",
-      "inId": "",
-      "secPhnumber": "",
-      "id": 12
-    },
-    {
-      "name": "",
-      "email": "",
-      "Company": "",
-      "phnumber": "",
-      "org": "",
-      "site": "",
-      "fbId": "",
-      "InstaId": "",
-      "inId": "",
-      "secPhnumber": "",
-      "id": 13
     },
     {
       "name": "Aashik",
@@ -251,33 +186,33 @@
       "InstaId": "jsjjj",
       "inId": "DABDBBDAJ",
       "secPhnumber": "0987777777777",
-      "id": 14
+      "id": 11
     },
     {
-      "name": "njy",
-      "email": "jujuju",
-      "Company": "njjjujuyj",
-      "phnumber": "uyjuyjuj",
-      "org": "jujuj",
-      "site": "jyujj",
-      "fbId": "jyjyjy",
-      "InstaId": "jjuyjuj",
-      "inId": "ujuu",
-      "secPhnumber": "uju",
-      "id": 15
+      "name": "Srivathsan",
+      "email": "srivatsancool.r@gmail.com",
+      "Company": "Senior Ui developer",
+      "phnumber": "8248155872",
+      "org": "Colan",
+      "site": "colan.com",
+      "fbId": "colanfb",
+      "InstaId": "pvl",
+      "inId": "chennai",
+      "secPhnumber": "1234567890",
+      "id": 12
     },
     {
-      "name": "njy",
-      "email": "jujuju",
-      "Company": "njjjujuyj",
-      "phnumber": "uyjuyjuj",
-      "org": "jujuj",
-      "site": "jyujj",
-      "fbId": "jyjyjy",
-      "InstaId": "jjuyjuj",
-      "inId": "ujuu",
-      "secPhnumber": "uju",
-      "id": 16
+      "name": "ruban",
+      "email": "rubar@gmali.com",
+      "Company": "ui",
+      "phnumber": "646543759432",
+      "org": "cdf",
+      "site": "ruban.com",
+      "fbId": "fb",
+      "InstaId": "instagram",
+      "inId": "linkedin.com",
+      "secPhnumber": "",
+      "id": 13
     }
   ]
 }

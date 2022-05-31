@@ -1,11 +1,15 @@
-import React,{useState} from 'react'
+import React,{useState } from 'react'
 import Header from './Header'
 import SideMenu from './SideMenu'
 import filedlogo from '../image/Field.png'
 import  axios  from 'axios'
+import { BrowserRouter as Routes, Route, useNavigate } from "react-router-dom"
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 
 function AddContact() {
+  const navigate = useNavigate();
   const [showSidebar, setShowSidebar] = useState(true);
   const [contactValue, setContactValue] =useState({
     name:'',
@@ -32,11 +36,20 @@ function AddContact() {
     
     const checking =(e) => {
       e.preventDefault(); 
-      
-      const postData=async()=>{
-        await axios.post("http://localhost:8001/contactlist",contactValue).then(data=>console.log(data.data))
+
+      if(!contactValue.name ==  "" &&  !contactValue.phnumber  == "" ) {
+        const postData=async()=>{
+          await axios.post("http://localhost:8001/contactlist",contactValue).then(data=>console.log(data.data))
+        }
+        postData();
+        navigate('/ManageContact')
+        toast("Swipe to close")
+
+      } else  {
+        toast("please enter the name and number")
       }
-      postData();
+      
+      
       
     }
 
@@ -58,6 +71,7 @@ function AddContact() {
       };
   return (
     <>
+    <ToastContainer />
     <Header onSidebar={onSidebar}/>
     <div className='side_inner'>
     {showSidebar? <SideMenu />:null}
@@ -227,7 +241,7 @@ function AddContact() {
           </div>
           <div className='col-12 bg_color update_cancel '>
             <input type='submit' value='Update'/>
-            {/* <input type='submit' value='Cancel'/> */}
+            <input onClick={()=>{ navigate('/ManageContact')}} type='button' value='Cancel'/>
           </div>
         </div>
        </form>

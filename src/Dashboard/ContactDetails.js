@@ -30,7 +30,7 @@ function ContactDetails() {
       navigate("/ManageContact/AddContact")
 
     }
-    const show = sessionStorage.getItem("editId");
+    const show = sessionStorage.getItem("cardId");
    
     useEffect(() => {
       const response=async()=>{

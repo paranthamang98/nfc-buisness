@@ -47,11 +47,13 @@ function Login() {
     const val = post.filter(e => {
         return (e.password == valuef.password) && (e.email == valuef.email)
      })
+     const getid = val.map((e)=> {return e.name})
      console.log(val);
      if(val.length>0){
+        sessionStorage.setItem("name" ,getid)
          navigate('/DashboardPage')
-         sessionStorage.setItem("email" ,valuef.email)
-         sessionStorage.setItem("password" ,valuef.password)
+        
+        
      }
     }
   

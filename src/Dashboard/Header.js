@@ -7,6 +7,7 @@ import  '../Dashboard/Dashboard.css'
 
 
 function Header({onSidebar}) {
+  const loginName = sessionStorage.getItem("name")
   return (
     <div className='header'>
         <div className='leftHeader'>
@@ -20,7 +21,7 @@ function Header({onSidebar}) {
                 <img src={imgProfile}/>
             </div>
             <div className='profil_name'>
-                <h6>Chris Hemsworth</h6>
+                <h6>{loginName}</h6>
                 <p>Super Admin</p>
             </div>
         </div>
