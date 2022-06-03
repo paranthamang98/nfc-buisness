@@ -9,8 +9,7 @@ import ManageContact from "./Dashboard/ManageContact"
 import ContactDetails from "./Dashboard/ContactDetails"
 import AddContact from "./Dashboard/AddContact"
 import UpdateContact from "./Dashboard/UpdateContact";
-
-
+import Lists from "./Dashboard/List";
 
 function App() {
   return (
@@ -30,6 +29,7 @@ function App() {
                 <Route exact path="/ResetPassword" element={<ResetPassword/>}/>
                 <Route  path="/ContactDetails" element={<ContactDetails/>}/>
                 <Route  path="/ManageContact/UpdateContact" element={ <UpdateContact/>}/>
+                <Route exact path="/list" element={ <Lists/> }/>
                
                 
            

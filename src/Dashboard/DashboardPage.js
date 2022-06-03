@@ -2,8 +2,10 @@ import React ,{useState , useEffect} from 'react'
 // import  logo from '../image/Group 19.png'
 import Header from './Header'
 import SideMenu from './SideMenu'
-
+import ReactDOM from 'react-dom';
+import Donut from 'react-donut';
 import  axios  from 'axios'
+import DonutChart from 'react-donut-chart';
 
 
 
@@ -61,7 +63,49 @@ function DashboardPage() {
           </div>
           <h2>55</h2>
           <div>
-           
+      <DonutChart
+  data={[
+    {
+      value: 41.5,
+      label: 'Washington',
+      // isEmpty:true
+      clickToggle:true
+    }, {
+      value: 26.1,
+      label: 'Los Angeles',
+      // isEmpty:true
+      clickToggle:true
+    }, {
+      value: 14,
+      label: 'North Coast ',
+      // isEmpty:true
+      clickToggle:true
+    },
+    {
+      value:  9.1,
+      label: 'Great Basin ',
+      // isEmpty:true
+      clickToggle:true
+    },{
+      value:  41.5,
+      label:'Central California',
+      clickToggle:true
+    }
+   
+  ]}
+  colors= { ['#D9B648', '#CA9C31', '#1170CB','#E37E06','#854095']}
+  colorFunction	={ (colors, index) => colors[(index % colors.length)]}	
+  innerRadius ={0.5}
+  outerRadius={0.8}
+  chartWidth={700}
+  chartHeight={300}
+  title="Marvel movies that were popular this year"
+  // chartThemeConfig={{
+  //   series: {
+  //     ,
+  //   },
+  // }}
+/>;
           </div>
             </div>
         </div>

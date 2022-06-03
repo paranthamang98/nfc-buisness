@@ -50,7 +50,7 @@ function Login() {
      const getid = val.map((e)=> {return e.name})
      console.log(val);
      if(val.length>0){
-        sessionStorage.setItem("name" ,getid)
+        sessionStorage.setItem("name" ,getid )
          navigate('/DashboardPage')
         
         
@@ -74,6 +74,7 @@ function Login() {
     };
   
   return (
+    
     <div className='main-login row '>
         <div className='col-6 mob'>
             <img src={banner}/>

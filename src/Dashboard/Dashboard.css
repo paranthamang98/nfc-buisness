@@ -581,4 +581,83 @@ margin-top: 10px;
 .table tbody td span{
     padding-right: 7px;
 }
+text.donutchart-legend-item-label {
+    fill: #ffff;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+/* popup */
+.labelPopup{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 378px;
+    padding: 30px;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    z-index: 2;
+
+}
+.labelPopup h1{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    border-bottom:  1px solid #BFBFBF;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    padding-block: 10px;
+}
+.labelPopup lable{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #6A6A6A;
+    display: block;
+    padding-block: 10px;
+}
+.labelPopup input{
+    border: 1px solid #BFBFBF;
+    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.05));
+    border-radius: 5px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+}
+.labelPopup button.btnSave{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    background: #F26339;
+    border: 1px solid #F26339;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+.labelPopup button.btnCancel{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #807F7F;
+    border: 1px solid #807F7F;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+.buttonInner{
+    display: flex;
+    justify-content: space-between;
+    padding-block: 20px;
+}
 

@@ -10,7 +10,7 @@ import Popup from './popup'
 import File from './file'
 
 
-function AddContact() {
+function List() {
   const navigate = useNavigate();
   const [showSidebar, setShowSidebar] = useState(true);
   const [showbar, setShowbar] = useState(false);
@@ -113,7 +113,7 @@ function AddContact() {
         <div className='con_list'>
           <h1>List of Contacts</h1>
           <div className='add_contact_btn'>
-            <button onClick={onbar}>Add Field</button>
+         
             <button onClick={() => handleAddFields()}>Add </button>
           </div>
         </div>
@@ -130,133 +130,10 @@ function AddContact() {
         </h4>
        <form onSubmit={checking}>
        <div className='row'>
-          <div className='col-lg-4 col-md-6 col-sm-12 inner_icon '>
-          <div className='name_item'>
-               <div className='name_icon'></div>
-               <lable>Name</lable>
-               <input
-                type='text'
-                name='name'
-                placeholder='Thomas Jefferson'
-                onChange={changing}
-               value={contactValue.name}
-               />
-               <div className='error' ></div>
-           </div>
-          </div>
+         
           
-          <div className='col-lg-4 col-md-6 col-sm-12 inner_icon '>
-          <div className='name_item'>
-               <div className='name_icon'></div>
-               <lable>Job Title</lable>
-               <input
-                type='text'
-                name='Company'
-                placeholder='Enter Job Title'
-                onChange={changing}
-               value={contactValue.Company}
-               />
-               <div className='error' ></div>
-           </div>
-          </div>
-          <div className='col-lg-4 col-md-6 col-sm-12 inner_icon '>
-          <div className='name_item'>
-               <div className='name_icon'></div>
-               <lable>Mobile Number</lable>
-               <input
-                type='text'
-                name='phnumber'
-                placeholder='Enter Phone Number'
-                onChange={changing}
-               value={contactValue.phnumber}
-               />
-               <div className='error' ></div>
-           </div>
-          </div>
-          <div className='col-lg-4 col-md-6 col-sm-12 inner_icon '>
-          <div className='name_item'>
-               <div className='name_icon'></div>
-               <lable>Email id</lable>
-               <input
-                type='text'
-                name='email'
-                placeholder='Enter Email id'
-                onChange={changing}
-               value={contactValue.email}
-               />
-               <div className='error' ></div>
-           </div>
-          </div>
-          <div className='col-lg-4 col-md-6 col-sm-12 inner_icon '>
-          <div className='name_item'>
-               <div className='name_icon'></div>
-               <lable>Organization</lable>
-               <input
-                type='text'
-                name='org'
-                placeholder='Enter Organization'
-                onChange={changing}
-               value={contactValue.org}
-               />
-               <div className='error' ></div>
-           </div>
-          </div>
-          <div className='col-lg-4 col-md-6 col-sm-12 inner_icon '>
-          <div className='name_item'>
-               <div className='name_icon'></div>
-               <lable>Website</lable>
-               <input
-                type='text'
-                name='site'
-                placeholder='Enter Website'
-                onChange={changing}
-               value={contactValue.site}
-               />
-               <div className='error' ></div>
-           </div>
-          </div>
-          <div className='col-lg-4 col-md-6 col-sm-12 inner_icon '>
-          <div className='name_item'>
-               <div className='name_icon'></div>
-               <lable>Facebook</lable>
-               <input
-                type='text'
-                name='fbId'
-                placeholder='Enter facebook link'
-                onChange={changing}
-               value={contactValue.fbId}
-               />
-               <div className='error' ></div>
-           </div>
-          </div>
-          <div className='col-lg-4 col-md-6 col-sm-12 inner_icon '>
-          <div className='name_item'>
-               <div className='name_icon'></div>
-               <lable>Instagram</lable>
-               <input
-                type='text'
-                name='InstaId'
-                placeholder='Enter Instagram link'
-                onChange={changing}
-               value={contactValue.InstaId}
-               />
-               <div className='error' ></div>
-           </div>
-          </div>
-          <div className='col-lg-4 col-md-6 col-sm-12 inner_icon '>
-          <div className='name_item'>
-               <div className='name_icon'></div>
-               <lable>Linkedin</lable>
-               <input
-                type='text'
-                name='inId'
-                placeholder='Enter Linkedin link'
-                onChange={changing}
-               value={contactValue.inId}
-               />
-               <div className='error' ></div>
-           </div>
-          </div>
+          
+         
           
 
           {/* addddd */}
@@ -288,4 +165,4 @@ function AddContact() {
   )
 }
 
-export default AddContact
+export default List
